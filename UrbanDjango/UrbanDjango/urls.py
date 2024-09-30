@@ -23,7 +23,7 @@ urlpatterns = [
     path('', index),
     path('admin/', admin.site.urls),
     path('class/', first.as_view()),
-    path('func/', second.as_view()),
+    path('func/', second),
     path('second/', Second.as_view()),
     path('third/', Third.as_view())
 ]

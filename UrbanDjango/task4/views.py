@@ -35,4 +35,3 @@ class Third(TemplateView):
         'pagename': 'Статистика',
         'sub_name': 'Under construction!'
     }
-

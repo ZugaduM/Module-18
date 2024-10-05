@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Главная страница{% endblock %}</title>
+    <style>
+        h1 {
+            align-content: center;
+            line-height: 0.5px;
+        }
+        h4 {
+            line-height: 0.5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        {% block header %}
+            <h1>{{ pagename }}</h1>
+            <h4>{{ sub_name }}</h4>
+        {% endblock %}
+    </header>
+
+    <nav>
+        {% block navigation %}
+            {% include "menu.html" %}
+        {% endblock %}
+    </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

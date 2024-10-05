@@ -17,13 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from task2.views import First, second
-from task3.views import index, Second, Third
+#from task3.views import index, Second, Third # закоментировал для выполнения задания по теме "DTL. Теги, наследование."
+from task4.views import index, second, Third, menu
 
 urlpatterns = [
     path('', index),
     path('admin/', admin.site.urls),
     path('class/', First.as_view()),
     path('func/', second),
-    path('second/', Second.as_view()),
-    path('third/', Third.as_view())
+    path('shops/', second),
+    path('stat/', Third.as_view()),
+    path('menu/', menu),
 ]

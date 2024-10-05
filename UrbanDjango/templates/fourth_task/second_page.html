@@ -1,0 +1,10 @@
+{% extends "index.html" %}
+{% block title %}Магазины{% endblock %}
+{% block header %}<h1>Магазины</h1>{% endblock %}
+
+{% block content %}
+    {% for company, url in zipped_urls %}
+        <li>{{ company }} <button><a href="{{ url }}">Перейти</a></button></li>
+    {% endfor %}
+{% endblock %}
+

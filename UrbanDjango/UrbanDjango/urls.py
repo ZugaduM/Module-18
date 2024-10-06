@@ -19,6 +19,7 @@ from django.urls import path
 from task2.views import First, second
 #from task3.views import index, Second, Third # закоментировал для выполнения задания по теме "DTL. Теги, наследование."
 from task4.views import index, second, Third, menu
+from task5.views import sign_up_by_html, sign_up_by_django
 
 urlpatterns = [
     path('', index),
@@ -28,4 +29,6 @@ urlpatterns = [
     path('shops/', second),
     path('stat/', Third.as_view()),
     path('menu/', menu),
+    path('html_sign_up/', sign_up_by_html),
+    path('django_sign_up/', sign_up_by_django),
 ]

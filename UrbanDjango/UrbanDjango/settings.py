@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
+from django.conf.global_settings import STATICFILES_DIRS
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
     'task2',
 #    'task3', # закоментировал для выполнения задания по теме "DTL. Теги, наследование."
     'task4',
+    'task5',
 ]
 
 MIDDLEWARE = [
@@ -57,8 +60,10 @@ ROOT_URLCONF = 'UrbanDjango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates/second_task', # BASE_DIR / 'templates/third_task', # закоментировал для выполнения задания по теме "DTL. Теги, наследование."
-                 BASE_DIR / 'templates/fourth_task'],
+        'DIRS': [BASE_DIR / 'templates/second_task',
+                 # BASE_DIR / 'templates/third_task', # закоментировал для выполнения задания по теме "DTL. Теги, наследование."
+                 BASE_DIR / 'templates/fourth_task',
+                 BASE_DIR / 'templates/fifth_task'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,6 +125,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
